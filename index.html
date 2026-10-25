@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portafolio</title>
+  <meta name="description" content="Portafolio personal: proyectos, estudios, logros y certificaciones." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="progress" aria-hidden="true"></div>
+
+  <header class="nav">
+    <a href="#inicio" class="logo" id="logo">✦</a>
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#experiencia">Experiencia</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#certificaciones">Certificaciones</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" id="themeBtn" aria-label="Cambiar tema">◐</button>
+      <button class="icon-btn menu-btn" id="menuBtn" aria-label="Abrir menú">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- PORTADA -->
+    <section id="inicio" class="hero">
+      <canvas id="particles" aria-hidden="true"></canvas>
+      <div class="hero-inner">
+        <p class="status" id="status"><span class="dot"></span> Disponible para trabajar y nuevos proyectos</p>
+        <h1 class="hero-title"><span class="hello">Hola, soy</span><span class="name" id="heroName"></span></h1>
+        <p class="hero-role"><span id="typed"></span><span class="caret">|</span></p>
+        <p class="hero-loc" id="heroLoc"></p>
+        <div class="hero-cta">
+          <a href="#experiencia" class="btn btn-primary magnetic">Ver mi experiencia</a>
+          <a href="#contacto" class="btn btn-ghost magnetic">Hablemos</a>
+          <a href="#" class="btn btn-ghost magnetic" id="cvBtn" download>Descargar CV</a>
+        </div>
+      </div>
+      <a href="#sobre-mi" class="scroll-hint" aria-label="Bajar"><span></span></a>
+    </section>
+
+    <!-- MARQUESINA DE HABILIDADES -->
+    <div class="marquee" aria-hidden="true"><div class="marquee-track" id="marquee"></div></div>
+
+    <!-- SOBRE MÍ -->
+    <section id="sobre-mi" class="section">
+      <div class="section-head reveal"><span class="kicker">01</span><h2>Sobre mí</h2></div>
+      <div class="about">
+        <div class="avatar-wrap reveal">
+          <div class="avatar" id="avatar"></div>
+          <div class="avatar-ring"></div>
+        </div>
+        <div class="about-text reveal">
+          <p class="bio" id="bio"></p>
+          <div class="skills" id="skills"></div>
+        </div>
+      </div>
+      <div class="stats" id="stats"></div>
+    </section>
+
+    <!-- EXPERIENCIA -->
+    <section id="experiencia" class="section">
+      <div class="section-head reveal"><span class="kicker">02</span><h2>Experiencia y estudios</h2></div>
+      <div class="two-col">
+        <div>
+          <h3 class="sub reveal">Experiencia profesional</h3>
+          <ol class="timeline" id="jobs"></ol>
+        </div>
+        <div>
+          <h3 class="sub reveal">Educación</h3>
+          <ol class="timeline" id="timeline"></ol>
+          <h3 class="sub reveal">Lo más destacado</h3>
+          <div class="achievements" id="achievements"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROYECTOS -->
+    <section id="proyectos" class="section">
+      <div class="section-head reveal"><span class="kicker">03</span><h2>Proyectos</h2></div>
+      <div class="filters reveal" id="filters"></div>
+      <div class="projects" id="projects"></div>
+    </section>
+
+    <!-- CERTIFICACIONES -->
+    <section id="certificaciones" class="section">
+      <div class="section-head reveal"><span class="kicker">04</span><h2>Cursos y certificaciones</h2></div>
+      <div class="certs" id="certs"></div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="section contact">
+      <div class="reveal">
+        <span class="kicker">05</span>
+        <h2 class="contact-title">¿Una vacante, una web o un equipo que falla?<br /><span class="grad">Hablemos.</span></h2>
+        <a class="mail magnetic" id="mailLink" href="#"></a>
+        <div class="socials" id="socials"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><p id="footer"></p></footer>
+
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
